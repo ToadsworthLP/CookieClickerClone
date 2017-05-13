@@ -1,1 +1,1 @@
-"# CookieClickerClone" 
+# CookieClickerClone

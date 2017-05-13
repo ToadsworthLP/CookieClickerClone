@@ -1,0 +1,164 @@
+body, html {height:100%; width: 100%;}
+ 
+/*Entfernen des Randes und Verstecken des Overflows*/
+body {
+  overflow: hidden; 
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px
+}
+
+.overlay {
+    background-color: rgba(1, 1, 1, 0.7);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+/*Der Keks*/
+.cookie {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin:-150px 0 0 -150px;
+  animation:wobble 1s ease-in-out infinite;
+}
+@keyframes wobble{
+  0%{
+    transform: scale(1.1,1.1);
+  }
+  50%{ 
+    transform: scale(1,1);
+  }
+  100%{ 
+    transform: scale(1.1,1.1);
+  }
+}
+ 
+.cookieWrapper:active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin:-150px 0 0 -150px;
+  animation:click 0.1s ease-in-out infinite;
+  animation-iteration-count: 1
+}
+@keyframes click{
+  0%{
+    transform: scale(1.0,1.0);
+  }
+  30%{ 
+    transform: scale(0.8,0.8);
+  }
+  100%{ 
+    transform: scale(1.0,1.0);
+  }
+}
+ 
+/*Die Punkteanzeige*/
+@font-face {
+    font-family: "cookieFont";
+    src: url(cookie.ttf) format("truetype");
+}
+.score {
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-size: 500%;
+  font-family: "cookieFont", Verdana, Tahoma;
+  text-shadow: 1px 1px 2px #303030;
+  top: 5%;
+  left: 5%;
+}
+ 
+ 
+/*Der sich langsamer drehende Leuchteffekt*/
+.shine {
+    position: absolute;
+    opacity:0.5;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 700px;
+    margin:-350px 0 0 -350px;
+    animation:spin 30s linear infinite;
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+ 
+/*Der sich schneller drehende Leuchteffekt*/
+.shine2 {
+    position: absolute;
+    opacity:0.5;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 700px;
+    margin:-350px 0 0 -350px;
+    animation:spin 15s linear infinite;
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+ 
+/*Geniale großartige epische animierte Milch*/
+#milk{
+  position:absolute;
+  width:100%;
+  min-height:100%;
+  background: white;
+  );
+}
+ 
+.wave{
+  position: absolute;
+  background:#a8e3ff;
+  display:inline-block;
+  height:80%;
+  width:10px;
+  position:absolute;
+  animation-name:             wavemaker; 
+  animation-duration:         3s; 
+  animation-iteration-count:  infinite;
+  transition-timing-function: ease-in-out;
+}
+@keyframes wavemaker{
+  0%{
+    height:80%;
+  }
+  50%{ 
+    height:60%;
+  }
+  100%{ 
+    height:80%;
+  }
+}
+
+.particles {
+  z-index: 2;
+  position: absolute;
+}
+
+.save {
+  z-index : 2;
+  position: absolute;
+  top: 5%;
+  left: 70%;
+  font-size: 200%;
+  font-family: "cookieFont", Verdana, Tahoma;
+  text-shadow: 1px 1px 2px #303030;
+  background: #3498db;
+  border-radius: 28px;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.save:hover {
+  background: #3cb0fd;
+}

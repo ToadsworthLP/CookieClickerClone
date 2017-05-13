@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CookieClickerClone</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="login.css">
+		<script src="cookie.js"></script>
+	</head>
+	<body>
+		<div class="wrapper" id="wrapper">
+			<div id="login" class="login">
+			  <div class="login-content">
+				    <p>Username:<br>
+				    <input id="username" type="text" name="username" value="Username"><br>
+				    <p>Password:<br>
+				    <input id="password" type="text" name="password" value="Passsword"><br><br>
+				    <input type="submit" value="OK" onclick="javascript:login()">
+			  </div>
+			</div>
+			<script src="login.js"></script>
+			<div class="particles" id="particles"></div>
+			<div id="milk"></div>
+			<script src="milk.js"></script>
+			<img class="shine" src="shine.png" alt="Klicke mich!" style="width:700px;height:700px;">
+			<img class="shine2" src="shine.png" alt="Klicke mich!" style="width:700px;height:700px;">
+			<div class="cookieWrapper">
+				<img onclick="javascript:clickCookie()" class="cookie" src="cookie.png" alt="Klicke mich!" style="width:300px;height:300px;">
+			</div>
+			<div class="score" id="score">0</div>
+			<input id="save" class="save" type="submit" value="Save & exit" onclick="javascript:save()">
+		</div>
+	</body>
+</html>

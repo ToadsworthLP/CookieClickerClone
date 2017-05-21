@@ -30,6 +30,11 @@ function login(){
     client.get("login.php?username=" + document.getElementById("username").value + "&password=" + document.getElementById("password").value, function(response) {
         window.cookies = parseInt(response.split(",")[0])-1;
         window.clickCookie();
+
+        window.upgrades = parseInt(response.split(",")[1]);
+        window.upgradePrice = 100*(2**window.upgrades);
+        document.getElementById("cost-text").innerHTML = window.upgradePrice + " Cookies";
+
         window.username = document.getElementById("username").value;
         closeLogin();
     });
@@ -37,7 +42,7 @@ function login(){
 
 function save(){
     var client = new HttpClient();
-    client.get("save.php?username=" + document.getElementById("username").value + "&cookies=" + window.cookies, function(response) {
+    client.get("save.php?username=" + document.getElementById("username").value + "&cookies=" + window.cookies + "&upgrades=" + window.upgrades, function(response) {
         alert(response);
         location.reload();
     });

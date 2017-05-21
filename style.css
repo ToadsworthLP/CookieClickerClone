@@ -79,6 +79,38 @@ body {
   left: 5%;
 }
  
+/*Der Upgrade-Button*/
+.upgrade {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+
+.upgrade:active {
+  animation:click 0.1s ease-in-out infinite;
+  animation-iteration-count: 1
+}
+
+/*Der Upgrade-Text*/
+.upgrade-text {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  color: grey;
+  font-size: 300%;
+  font-family: "cookieFont", Verdana, Tahoma;
+  text-shadow: 1px 1px 2px #303030;
+}
+
+.cost-text {
+  position: absolute;
+  bottom: 4%;
+  left: 20%;
+  color: green;
+  font-size: 260%;
+  font-family: "cookieFont", Verdana, Tahoma;
+  text-shadow: 1px 1px 2px #303030;
+}
  
 /*Der sich langsamer drehende Leuchteffekt*/
 .shine {
@@ -139,16 +171,12 @@ body {
   }
 }
 
-.particles {
-  z-index: 2;
-  position: absolute;
-}
-
+/*Der Save-Button*/
 .save {
   z-index : 2;
   position: absolute;
   top: 5%;
-  left: 70%;
+  right: 50px;
   font-size: 200%;
   font-family: "cookieFont", Verdana, Tahoma;
   text-shadow: 1px 1px 2px #303030;
